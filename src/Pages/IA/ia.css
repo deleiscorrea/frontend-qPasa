@@ -1,0 +1,31 @@
+.ia{
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    padding: 5px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+}
+
+.btnIa{
+    border: none;
+    background-color: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+
+}
+
+.imgIa{
+    width: 40px;
+    height: 40px;
+    margin: 3px 2px 0 0;
+}
+
+.ia h2{
+    margin: 10px 0;
+    font-size: 15px;
+}

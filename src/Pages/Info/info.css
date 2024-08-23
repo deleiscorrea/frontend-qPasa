@@ -1,0 +1,339 @@
+.informacion{
+    background-color: #F5004F;
+}
+
+.volver{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.atras{
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+}
+
+.bi-caret-left-fill{
+    font-size: 30px;
+}
+
+.fotoConfig{
+    display: flex;
+}
+
+.infoAjustes{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 40px;
+    margin-top: 32px;
+    margin-left: 15px
+}
+
+.silenciar{
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.llamada{
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.configuracion{
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.volver h1{
+    font-size: 20px;
+}
+
+.infoFoto{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.estado{
+    margin: 10px 0 10px 0;
+    height: 180px;
+    background-color: #F9E400;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 8px;
+}
+
+@media screen and (min-width: 500px){
+    .volver{
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: yellow;
+    }
+
+    .volver h1{
+        font-size: 25px;
+    }
+    
+    .infoAjustes{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 40px;
+        margin-top: 30px;
+        margin-left: 60px;
+    }
+
+    .estado{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .informacion{
+        display: flex;
+        height: 100vh;
+    }
+
+    .volver{
+        display: flex;
+        align-items: normal;
+        justify-content: start;
+        background-color: #F9E400;
+        width: 120px;
+    }
+
+    .volver h1{
+        margin-left: 45px;
+    }
+    
+    .atras{
+        position: absolute;
+        left: 0;
+        width: 72px;
+        height: 40%;
+        background: none;
+        border: none;
+        display: flex;
+        margin-top: 0px;
+        margin-left: 10px;
+        padding: 80px 0px;
+    }
+    
+    .bi-caret-left-fill{
+        font-size: 45px;
+    }
+    
+    .fotoConfig{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 310px;
+    }
+    
+    .infoAjustes{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        margin-top: 50px;
+        margin-left: 15px;
+        position: absolute;
+        top: 290px;
+        left: 150px;
+        margin-left: 0px;
+        
+    }
+
+    .silenciar{
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+    }
+    
+    .llamada{
+        background: none;
+        border: none;
+        font-size: 25px;
+        color: white;
+    }
+    
+    .configuracion{
+        background: none;
+        border: none;
+        font-size: 25px;
+        color: white;
+    }
+    
+    .volver h1{
+        font-size: 40px;
+        position: absolute;
+        top: 30px;
+        margin-left: 380px;
+    }
+    
+    .infoFoto{
+        width: 300px;
+        height: 300px;
+        border: 3px solid black;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 10px;
+        position: absolute;
+        left: 0;
+        margin-left: 68px;
+    }
+    
+    .estado{
+        margin: 0;
+        height: auto;
+        background-color: yellow;
+        padding-top: 1px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 105px;
+        margin-left: 400px;
+        margin-right: 40px;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .informacion{
+        display: flex;
+        height: 100vh;
+    }
+
+    .volver{
+        display: flex;
+        align-items: normal;
+        justify-content: start;
+        background-color: rgb(31, 31, 113);
+        width: 120px;
+    }
+
+    .volver h1{
+        margin-left: 45px;
+        color: white;
+    }
+    
+    .atras{
+        position: absolute;
+        left: 0;
+        width: 72px;
+        height: 40%;
+        background: none;
+        border: none;
+        display: flex;
+        margin-top: 0px;
+        margin-left: 10px;
+        padding: 80px 0px;
+    }
+    
+    .bi-caret-left-fill{
+        font-size: 45px;
+        color: white;
+    }
+    
+    .fotoConfig{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 310px;
+    }
+    
+    .infoAjustes{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        margin-top: 50px;
+        margin-left: 15px;
+        position: absolute;
+        top: 290px;
+        left: 150px;
+        margin-left: 0px;
+        
+    }
+
+    .silenciar{
+        background: none;
+        border: none;
+        font-size: 25px;
+        color: black;
+        }
+    
+    .llamada{
+        background: none;
+        border: none;
+        font-size: 25px;
+        color: black;
+    }
+    
+    .configuracion{
+        background: none;
+        border: none;
+        font-size: 25px;
+        color: black;
+    }
+    
+    .volver h1{
+        font-size: 40px;
+        position: absolute;
+        top: 30px;
+        margin-left: 380px;
+    }
+    
+    .infoFoto{
+        width: 300px;
+        height: 300px;
+        border: 3px solid black;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 10px;
+        position: absolute;
+        left: 0;
+        margin-left: 68px;
+    }
+    
+    .estado{
+        margin: 0;
+        height: auto;
+        background-color: yellow;
+        padding-top: 1px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 105px;
+        margin-left: 400px;
+        margin-right: 40px;
+        padding: 10px;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,575 @@
+body{
+    background-color: rgb(31, 31, 113);
+}
+
+.contacto{
+    display: flex;
+    gap: 10px;
+    background-color: #F5004F;
+    padding: 5px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 45px;
+}
+
+.funciones{
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+}
+
+.btnLlamada{
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+.btnConfig{
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.btnFoto{
+    border: none;
+    background-color: #F5004F;
+    display: flex;
+}
+
+.fotoContacto{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid black
+}
+
+.infoContacto{
+    text-decoration: none;
+    z-index: 3;
+}
+
+.contacto h2{
+    margin: 10px 0;
+    font-size: 15px;
+    color: white;
+}
+
+.mensajes{
+    margin: 50px 0px 50px 0px;
+}
+
+.mensajeYo{
+    display: flex;
+    background-color: #F5004F;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 5px;
+    max-width: 80%;
+    min-width: 30%;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-right: 10px;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
+.mensajeOtro{
+    display: flex;
+    background-color: #F9E400;
+    flex-direction: column;
+    width: fit-content;
+    margin-right: auto;
+    margin-top: 5px;
+    max-width: 80%;
+    min-width: 30%;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-left: 10px;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
+.horaEstado{
+    align-self: flex-end;
+    display: flex;
+    margin-top: 4px;
+    gap: 5px;
+    font-size: 11px;
+    align-items: center;
+}
+
+.bi-eye-fill, .bi-eye-slash-fill{
+    font-size: 12px;
+}
+
+.bi-eye-fill{
+    color: #F9E400;
+}
+
+.campoMensaje{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: rgb(31, 31, 113);
+    padding: 10px;
+}
+
+.texto{
+    width: 100%;
+    resize: none;
+    border-radius: 50px;
+    padding: 2.5px 0px 2.5px 10px;
+    align-content: center;
+    outline: none;
+}
+
+.btnEnviar{
+    border: none;
+    padding: 10px;
+    border-radius: 100%;
+    width: 37px;
+    height: 37px;
+    background-color: #F9E400;
+}
+
+.enviar{
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    right: 14.5px;
+    bottom: 14.5px;
+}
+
+@media screen and (min-width: 500px){
+    .contacto{
+        gap: 0px;
+        height: 60px;
+    }
+    
+    .funciones{
+        margin-right: 20px;
+    }
+    
+    .btnLlamada{
+        font-size: 25px;
+    }
+    
+    .btnConfig{
+        font-size: 25px;
+        margin-left: 25px;
+    }
+
+    .btnFoto{
+        background-color: #F5004F;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    
+    .fotoContacto{
+        width: 58px;
+        height: 58px;
+        border: 3px solid black;
+        margin-top: 1.5px;
+    }
+
+    .infoContacto{
+        text-decoration: none;
+        z-index: 3;
+        display: flex;
+        margin-left: 75px;
+    }
+    
+    .contacto h2{
+        font-size: 25px;
+        margin-left: 0px;
+    }
+    
+    .mensajes{
+        margin: 70px 0px 70px 0px;
+    }
+    
+    .mensajeYo{
+        max-width: 65%;
+        min-width: 20%;
+        font-size: 15px;
+    }
+    
+    .mensajeOtro{
+        max-width: 65%;
+        min-width: 20%;
+        font-size: 15px;
+    }
+    
+    .horaEstado{
+        margin-top: 5px;
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    .bi-eye-fill, .bi-eye-slash-fill{
+        font-size: 13px;
+    }
+    
+    .campoMensaje{
+        height: 67px;
+        width: 101%;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .texto{
+        height: 45px;
+        padding: 0px 0px 2.5px 15px;
+    }
+
+    .texto::placeholder{
+        font-size: 15px;
+    }
+    
+    .btnEnviar{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .enviar{
+        width: 30px;
+        height: 28px;
+        right: 18px;
+        bottom: 18.5px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .contacto{
+        height: 73px;
+        justify-content: center;
+    }
+
+    .funciones{
+        margin-right: 50px;
+    }
+    
+    .btnLlamada{
+        font-size: 35px;
+    }
+    
+    .btnConfig{
+        font-size: 35px;
+        margin-left: 50px;
+    }
+
+    .btnFoto{
+        height: 70px;
+        width: 70px;
+    }
+
+    .fotoContacto{
+        width: 100%;
+        height: 100%;
+        border: 3px solid black
+    }
+
+    .infoContacto{
+        text-decoration: none;
+        z-index: 3;
+        margin-left: 0;
+    } 
+
+    .contacto h2{
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .mensajes{
+        margin: 85px 0px 85px 0px;
+    }
+
+    .mensajeYo{
+        margin-top: 10px;
+        max-width: 70%;
+        min-width: 10%;
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .mensajeOtro{
+        margin-top: 10px;
+        max-width: 70%;
+        min-width: 10%;
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .horaEstado{
+        margin-top: 6px;
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .bi-eye-fill, .bi-eye-slash-fill{
+        font-size: 20px;
+    }
+
+    .campoMensaje{
+        height: 80px;
+        padding: 30px;
+    }
+
+    .texto{
+        padding: 0px 0px 0px 25px;
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .texto::placeholder{
+        font-size: 25px;
+        position: absolute;
+        bottom: 28%;
+    }
+
+    .btnEnviar{
+        padding: 10px;
+        border-radius: 100%;
+        width: 65px;
+        height: 65px;
+        background-color: #F9E400;
+    }
+
+    .enviar{
+        width: 48px;
+        height: 40px;
+        position: absolute;
+        right: 34px;
+        bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+
+    .contacto{
+        height: 83px;
+    }
+
+    .funciones{
+        margin-left: 130px;
+        left: 0;
+    }
+    
+    .btnLlamada{
+        font-size: 35px;
+    }
+    
+    .btnConfig{
+        font-size: 35px;
+        margin-left: 50px;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+    }
+
+    .btnFoto{
+        height: 80px;
+        width: 80px;
+        margin-left: 20px;
+    }
+
+    .fotoContacto{
+        border-radius: 20px;
+    }
+
+    .contacto h2{
+        font-size: 40px;
+    }
+
+    .mensajes{
+        margin: 95px 0px 90px 0px;
+    }
+
+    .mensajeYo{
+        margin-top: 10px;
+        max-width: 60%;
+        min-width: 5%;
+        padding: 15px;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    .mensajeOtro{
+        margin-top: 10px;
+        max-width: 60%;
+        min-width: 5%;
+        padding: 15px;
+        margin-left: 15px;
+        font-size: 20px;
+    }
+
+    .horaEstado{
+        margin-top: 8px;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .bi-eye-fill, .bi-eye-slash-fill{
+        font-size: 15px;
+    }
+
+    .campoMensaje{
+        height: 80px;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .texto{
+        padding: 0px 0px 0px 25px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .texto::placeholder{
+        font-size: 20px;
+        position: absolute;
+        bottom: 25%;
+    }
+
+    .btnEnviar{
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .enviar{
+        width: 36px;
+        height: 32px;
+        right: 48px;
+        bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .contacto{
+        height: 102px;
+    }
+
+    .funciones{
+        margin-left: 180px;
+    }
+    
+    .btnLlamada{
+        font-size: 40px;
+    }
+    
+    .btnConfig{
+        font-size: 40px;
+    }
+
+    .btnFoto{
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+    }
+
+    .fotoContacto{
+        border: 4px solid black;
+        border-radius: 20px;
+    }
+
+    .contacto h2{
+        font-size: 50px;
+    }
+
+    .mensajes{
+        margin: 115px 0px 105px 0px;
+    }
+
+    .mensajeYo{
+        margin-top: 10px;
+        max-width: 60%;
+        min-width: 10%;
+        padding: 20px;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+    .mensajeOtro{
+        margin-top: 10px;
+        max-width: 60%;
+        min-width: 10%;
+        padding: 20px;
+        margin-left: 20px;
+        font-size: 30px;
+    }
+
+    .horaEstado{
+        margin-top: 8px;
+        gap: 10px;
+        font-size: 22px;
+    }
+
+    .bi-eye-fill, .bi-eye-slash-fill{
+        font-size: 22px;
+    }
+
+    .campoMensaje{
+        height: 100px;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .texto{
+        padding: 0px 0px 0px 25px;
+        height: 65px;
+        font-size: 30px;
+    }
+
+    .texto::placeholder{
+        font-size: 30px;
+        position: absolute;
+        bottom: 25%;
+    }
+
+    .btnEnviar{
+        padding: 10px;
+        border-radius: 100%;
+        width: 65px;
+        height: 65px;
+        background-color: #F9E400;
+        margin-right: 15px;
+    }
+
+    .enviar{
+        width: 48px;
+        height: 40px;
+        position: absolute;
+        right: 50px;
+        bottom: 30px;
+    }
+}
+
+
+
+/*
+1200/1600:
+
+.infoContacto{
+    text-decoration: none;
+    z-index: 3;
+    background-color: black;
+} */

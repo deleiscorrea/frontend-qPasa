@@ -71,7 +71,7 @@
 
 .estado{
     margin: 10px 0 10px 0;
-    height: 180px;
+    height: 200px;
     background-color: #F9E400;
     padding: 10px;
     display: flex;
@@ -79,6 +79,7 @@
     align-items: center;
     margin-top: 10px;
     font-size: 8px;
+    line-height: 10px;
 }
 
 @media screen and (min-width: 500px){
@@ -105,6 +106,7 @@
 
     .estado{
         font-size: 10px;
+        line-height: 13px;
     }
 }
 
@@ -219,6 +221,7 @@
         margin-right: 40px;
         padding: 10px;
         font-size: 20px;
+        line-height: 30px;
     }
 }
 

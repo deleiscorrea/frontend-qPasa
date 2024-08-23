@@ -81,20 +81,20 @@ const Home = () => {
                                         <h3 className='autor'>{mensaje.contacto}</h3>
                                         <p className='ultimoMensaje'>
                                         {anchoVentana < 500
-                                            ? (ultimoMensaje.texto.length > 25 
-                                                ? `${ultimoMensaje.texto.slice(0, 25)}...` 
+                                            ? (ultimoMensaje.texto.length > 34
+                                                ? `${ultimoMensaje.texto.slice(0, 34)}...` 
                                                 : ultimoMensaje.texto)
                                             : anchoVentana < 1200
-                                                ? (ultimoMensaje.texto.length > 40 
-                                                    ? `${ultimoMensaje.texto.slice(0, 40)}...` 
+                                                ? (ultimoMensaje.texto.length > 50 
+                                                    ? `${ultimoMensaje.texto.slice(0, 50)}...` 
                                                     : ultimoMensaje.texto)
                                                 : anchoVentana < 1600
-                                                    ? (ultimoMensaje.texto.length > 80
-                                                        ? `${ultimoMensaje.texto.slice(0, 80)}...` 
+                                                    ? (ultimoMensaje.texto.length > 78
+                                                        ? `${ultimoMensaje.texto.slice(0, 78)}...` 
                                                         : ultimoMensaje.texto)
-                                                    : anchoVentana > 1600
-                                                        ? (ultimoMensaje.texto.length > 58
-                                                            ? `${ultimoMensaje.texto.slice(0, 58)}...` 
+                                                    : anchoVentana < 2000
+                                                        ? (ultimoMensaje.texto.length > 68
+                                                            ? `${ultimoMensaje.texto.slice(0, 68)}...` 
                                                             : ultimoMensaje.texto)
                                                         : ultimoMensaje.texto
                                         }

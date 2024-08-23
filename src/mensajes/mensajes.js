@@ -301,4 +301,134 @@ export const mensajes = [
             }
         ]
     },
+    {
+        contacto: "WALTER WHITE",
+        id: 11,
+        foto: "/imagenes/walter.webp",
+        estado: "I AM THE ONE WHO COOKS",
+        contenido: [
+            {
+                autor: "otro",
+                texto: "give me the drugs",
+                hora: "01:34",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: "se las llevo jesse",
+                hora: "01:35",
+                estado: "visto"
+            },
+            {
+                autor: "otro",
+                texto: "liar",
+                hora: "01:35",
+                estado: "visto"
+            }
+        ]
+    },
+    {
+        contacto: "VALAK",
+        id: 12,
+        foto: "/imagenes/monja.jpg",
+        estado: "LA MONJITA",
+        contenido: [
+            {
+                autor: "otro",
+                texto: "be careful when you go to the bathroom",
+                hora: "03:33",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: ":O",
+                hora: "09:20",
+                estado: "visto"
+            }
+        ]
+    },
+    {
+        contacto: "NEGAN",
+        id: 13,
+        foto: "/imagenes/negan.webp",
+        estado: "LITTLE PIG, LITTLE PIG",
+        contenido: [
+            {
+                autor: "otro",
+                texto: "who are you?",
+                hora: "21:12",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: "soy nacho",
+                hora: "21:12",
+                estado: "visto"
+            },
+            {
+                autor: "otro",
+                texto: "asshole",
+                hora: "00:40",
+                estado: "visto"
+            }
+        ]
+    },
+    {
+        contacto: "ARISTÓTELES",
+        id: 14,
+        foto: "/imagenes/aristoteles.jpg",
+        estado: "PADRE DE LA LÓGICA",
+        contenido: [
+            {
+                autor: "yo",
+                texto: "por que sos el padre de la logica",
+                hora: "14:28",
+                estado: "visto"
+            },
+            {
+                autor: "otro",
+                texto: "fuí el primero en sistematizar y formalizar el estudio de los principios del razonamiento correcto",
+                hora: "17:50",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: "tanto la filosofia como la programacion usan de la logica.",
+                hora: "17:54",
+                estado: "visto"
+            }
+        ]
+    },
+    {
+        contacto: "LISA SIMPSON",
+        id: 15,
+        foto: "/imagenes/lisa.jpg",
+        estado: "CUANDO ESTOY TRISTE ABRO UN LIBRO E IGNORO AL MUNDO",
+        contenido: [
+            {
+                autor: "otro",
+                texto: "hola",
+                hora: "18:05",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: "hola lisa",
+                hora: "18:07",
+                estado: "visto"
+            },
+            {
+                autor: "otro",
+                texto: "vamos al kwik-e-mart?",
+                hora: "18:08",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: "dale",
+                hora: "18:08",
+                estado: "visto"
+            }
+        ]
+    }
 ]

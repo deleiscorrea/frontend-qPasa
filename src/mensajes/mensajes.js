@@ -381,7 +381,7 @@ export const mensajes = [
         contenido: [
             {
                 autor: "yo",
-                texto: "por que sos el padre de la logica",
+                texto: "por que sos el padre de la logica?",
                 hora: "14:28",
                 estado: "visto"
             },
@@ -394,6 +394,12 @@ export const mensajes = [
             {
                 autor: "yo",
                 texto: "tanto la filosofia como la programacion usan de la logica.",
+                hora: "17:54",
+                estado: "visto"
+            },
+            {
+                autor: "yo",
+                texto: "la filosofia, especialmente a traves de la logica, proporciona las bases del razonamiento formal, que es esencial en la programacion. la logica proposicional y de predicados, desarrollada en gran parte por filosofos, es fundamental para entender estructuras condicionales, bucles y otros aspectos de la programación.",
                 hora: "17:54",
                 estado: "visto"
             }

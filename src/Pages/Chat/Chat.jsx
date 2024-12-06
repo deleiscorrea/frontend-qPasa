@@ -27,7 +27,7 @@ const Chat = () => {
     return (
         <>
             <div className='contacto'>
-                <Link to={'/'}>
+                <Link to={'/home'}>
                     <button className='btnFoto'>
                         <img className='fotoContacto' src={contacto.foto} alt={contacto.foto} />
                     </button>

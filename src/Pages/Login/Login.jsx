@@ -1,38 +1,35 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { extractFormData } from '../../utils/extractFormData'
+import { authenticatedHeaders, POST } from '../../fetching/fetching'
 
 const Login = () => {
-  const handleSubmitLoginForm = (e) => {
-    e.preventDefault()
-    const form_HTML = e.target
-    const form_values = new FormData(form_HTML)
-    const form_fields = {
-      email: "",
-      password: ""
+  const navigate = useNavigate()
+  const handleSubmitLoginForm = async (e) => {
+    try{
+      e.preventDefault()
+      const form_HTML = e.target
+      const form_values = new FormData(form_HTML)
+      const form_fields = {
+        email: "",
+        password: ""
+      }
+      const form_values_object = extractFormData(form_fields, form_values)
+      const response = await POST(
+        'http://localhost:3000/api/auth/login', {
+            headers: authenticatedHeaders,
+            body: JSON.stringify(form_values_object)
+        }
+      )
+    console.log({response})
+      const access_token = response.payload.token
+      sessionStorage.setItem('access_token', access_token)
+      sessionStorage.setItem('user_info', JSON.stringify(response.payload.user))
+      navigate('/home')
     }
-    const form_values_object = extractFormData(form_fields, form_values)
-    fetch('http://localhost:3000/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form_values_object)
-    })
-      .then(
-        (responseHTTP) => {
-          console.log({ responseHTTP })
-          return responseHTTP.json()
-        }
-      )
-      .then(
-        (body) => {
-          console.log({ body })
-        }
-      )
-      .catch(
-        (error) => { console.error(error) }
-      )
+    catch(error){
+      console.error(error)
+    }
   }
   return (
     <div>

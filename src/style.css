@@ -1,7 +1,11 @@
 @import url("./Pages/Home/home.css");
 @import url("./Pages/Chat/chat.css");
 @import url("./Pages/Info/info.css");
-@import url("./Pages/IA/ia.css");
+@import url("./Pages/CreateContact/createContact.css");
+@import url("./Pages/Login/login.css");
+@import url("./Pages/Register/register.css");
+@import url("./Pages/ForgotPassword/forgotPassword.css");
+@import url("./Pages/ResetPassword/resetPassword.css");
 
 *{
     margin: 0;

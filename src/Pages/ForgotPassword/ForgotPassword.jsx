@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { extractFormData } from '../../utils/extractFormData'
+import { authenticatedHeaders, POST } from '../../fetching/fetching'
 
 const ForgotPassword = () => {
-    const handleSubmitLoginForm = (e) => {
+    const handleSubmitLoginForm = async (e) => {
         e.preventDefault()
         const form_HTML = e.target
         const form_values = new FormData(form_HTML)
@@ -11,27 +12,13 @@ const ForgotPassword = () => {
             email: "",
         }
         const form_values_object = extractFormData(form_fields, form_values)
-        fetch('http://localhost:3000/api/auth/forgot-password', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(form_values_object)
-        })
-            .then(
-                (responseHTTP) => {
-                    console.log({ responseHTTP })
-                    return responseHTTP.json()
-                }
-            )
-            .then(
-                (body) => {
-                    console.log({ body })
-                }
-            )
-            .catch(
-                (error) => { console.error(error) }
-            )
+        const response = await POST(
+            'http://localhost:3000/api/auth/forgot-password', {
+                headers: authenticatedHeaders,
+                body: JSON.stringify(form_values_object)
+            }
+        )
+        console.log({response})
     }
     return (
         <div>

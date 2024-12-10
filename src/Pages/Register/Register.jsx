@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { extractFormData } from '../../utils/extractFormData'
+import { extractFormData } from '../../utils/extractFormData.js'
 import useForm from '../../Hooks/useForm'
+import { POST, unnauthenticatedHeaders } from '../../fetching/fetching.js'
 
 const Register = () => {
   const form_fields = {
@@ -11,31 +12,19 @@ const Register = () => {
   }
   const {form_values_state, handleChangeInputValue} = useForm(form_fields)
   console.log(form_values_state)
-  const handleSubmitRegisterForm = (e) => {
+  const handleSubmitRegisterForm = async (e) => {
     e.preventDefault()
     const form_HTML = e.target
+    const form_values = new FormData(form_HTML)
+    const form_values_object = extractFormData(form_fields, form_values)
     
-    fetch('http://localhost:3000/api/auth/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form_values_state)
-    })
-      .then(
-        (responseHTTP) => {
-          console.log({ responseHTTP })
-          return responseHTTP.json()
-        }
-      )
-      .then(
-        (body) => {
-          console.log({ body })
-        }
-      )
-      .catch(
-        (error) => { console.error(error) }
-      )
+    const response = await POST(
+      'http://localhost:3000/api/auth/register', {
+        headers: unnauthenticatedHeaders,
+        body: JSON.stringify(form_values_object)
+      }
+    )
+    console.log({response})
   }
   return (
     <div>

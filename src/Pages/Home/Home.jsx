@@ -112,7 +112,7 @@ const Home = () => {
                     <i className="bi bi-search"></i>
                 </button>
                 )}
-            <Link to={'/contact/new'}>
+            <Link to={'/contacts'}>
                 <button className='btnIA'>
                     <img src="imagenes/ia.png" alt="ia" className='imgIA'/>
                 </button>

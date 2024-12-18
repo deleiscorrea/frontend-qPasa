@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import { authenticatedHeaders } from '../../fetching/fetching.js'
+import React, { useEffect, useState } from 'react'
+import { getAuthenticatedHeaders, POST } from '../../fetching/fetching.js'
+import { extractFormData } from '../../utils/extractFormData.js'
+import { Link } from 'react-router-dom'
 
 const CreateContact = () => {
     const [image, setImage] = useState("")
@@ -17,18 +19,23 @@ const CreateContact = () => {
             form_values_object.image = image
             const response = await POST(
                 'http://localhost:3000/api/contacts', {
-                    headers: authenticatedHeaders,
+                    headers: getAuthenticatedHeaders(),
                     body: JSON.stringify(form_values_object)
                 }
             )
             console.log({response})   
         }
         catch (error) {
-
+            console.error(error)
         }
     }
     const handleChangeFile = (e) => {
         const file_found = e.target.files[0]
+        if(file_found && file_found.size > 2 * 1024 * 1024){
+            alert("El archivo es demasiado grande")
+            return
+        }
+        
         const lector = new FileReader()
         lector.onloadend = () => {
             console.log("carga finizada")
@@ -63,6 +70,7 @@ const CreateContact = () => {
                 </div>
                 <button type='submit'>Crear contacto</button>
             </form>
+            <Link to={'/contacts'}>Contactos</Link>
         </div>
     )
 }

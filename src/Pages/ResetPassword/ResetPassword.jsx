@@ -15,7 +15,8 @@ const ResetPassword = () => {
         fetch('http://localhost:3000/api/auth/reset-password/' + reset_token, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'x-api-key': '023be404-c59a-4f97-bce4-941acd7331c5'
             },
             body: JSON.stringify(form_values_object)
         })

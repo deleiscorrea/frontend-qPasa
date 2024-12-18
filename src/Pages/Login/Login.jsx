@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { extractFormData } from '../../utils/extractFormData'
-import { authenticatedHeaders, POST } from '../../fetching/fetching'
+import { getAuthenticatedHeaders, POST } from '../../fetching/fetching'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -17,7 +17,7 @@ const Login = () => {
       const form_values_object = extractFormData(form_fields, form_values)
       const response = await POST(
         'http://localhost:3000/api/auth/login', {
-            headers: authenticatedHeaders,
+            headers: getAuthenticatedHeaders(),
             body: JSON.stringify(form_values_object)
         }
       )

@@ -8,6 +8,9 @@ import Register from './Pages/Register/Register'
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword'
 import ResetPassword from './Pages/ResetPassword/ResetPassword'
 import CreateContact from './Pages/CreateContact/CreateContact'
+import Contacts from './Pages/Contacts/Contacts'
+import DetailContact from './Pages/DetailContact/DetailContact'
+import ProtectedRoute from './Components/ProtectedRoute'
 
 function App() {
   return (
@@ -17,10 +20,14 @@ function App() {
       <Route path='/register' element={<Register/>} />
       <Route path='/forgot-password' element={<ForgotPassword/>} />
       <Route path='/reset-password/:reset_token' element={<ResetPassword/>} />
-      <Route path='/home' element={<Home/>} />
-      <Route path='/contact/new' element={<CreateContact/>} />
-      <Route path='/chat/:contacto_id' element={<Chat/>} />
-      <Route path='/info/:contacto_id' element={<Info/>} />
+      <Route element={<ProtectedRoute/>}>
+        <Route path='/home' element={<Home/>} />
+        <Route path='/contacts' element={<Contacts/>} />
+        <Route path='/contacts/:contacto_id' element={<DetailContact/>} />
+        <Route path='/contacts/new' element={<CreateContact/>} />
+        <Route path='/chat/:contacto_id' element={<Chat/>} />
+        <Route path='/info/:contacto_id' element={<Info/>} />
+      </Route>
     </Routes>
   )
 }

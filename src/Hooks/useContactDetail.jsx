@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { GET, getAuthenticatedHeaders } from "../fetching/fetching"
 import { useNavigate } from "react-router-dom"
+import ENVIROMENT from "../enviroment"
 
 const useContactDetail = (contact_id) => {
     const [contactDetail, setContactDetail] = useState(null)
@@ -10,7 +11,7 @@ const useContactDetail = (contact_id) => {
     
     const getContactDetail = async (contact_id) => {
         const contact_detail_response = await GET(
-            "http://localhost:3000/api/contacts/" + contact_id, {
+            `${ENVIROMENT.URL_BACKEND}/api/contacts/` + contact_id, {
                 headers: getAuthenticatedHeaders()
             }
         )

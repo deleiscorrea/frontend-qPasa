@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getAuthenticatedHeaders, POST } from '../../fetching/fetching.js'
 import { extractFormData } from '../../utils/extractFormData.js'
 import { Link } from 'react-router-dom'
+import ENVIROMENT from '../../enviroment.js'
 
 const CreateContact = () => {
     const [image, setImage] = useState("")
@@ -18,7 +19,7 @@ const CreateContact = () => {
             const form_values_object = extractFormData(form_fields, form_values)
             form_values_object.image = image
             const response = await POST(
-                'http://localhost:3000/api/contacts', {
+                `${ENVIROMENT.URL_BACKEND}/api/contacts`, {
                     headers: getAuthenticatedHeaders(),
                     body: JSON.stringify(form_values_object)
                 }

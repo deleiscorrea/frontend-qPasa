@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { GET, getAuthenticatedHeaders } from "../fetching/fetching.js"
+import ENVIROMENT from "../enviroment.js"
 
 const useContacts = () => {
     const [contacts, setContacts] = useState([])
@@ -7,7 +8,7 @@ const useContacts = () => {
 
     const getContacts = async () => {
         const response = await GET(
-            "http://localhost:3000/api/contacts", {
+            `${ENVIROMENT.URL_BACKEND}/api/contacts`, {
             headers: getAuthenticatedHeaders(),
             }
         )

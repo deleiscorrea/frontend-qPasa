@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { extractFormData } from '../../utils/extractFormData'
 import { getAuthenticatedHeaders, POST } from '../../fetching/fetching'
-import ENVIROMENT from '../../enviroment'
+import ENVIROMENT from '../../enviroment.js'
 
 const Login = () => {
   const navigate = useNavigate()

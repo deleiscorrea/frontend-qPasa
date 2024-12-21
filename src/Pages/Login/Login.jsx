@@ -34,18 +34,20 @@ const Login = () => {
   }
   return (
     <div>
-      <h1>Iniciá sesión</h1>
-      <form onSubmit={handleSubmitLoginForm}>
-        <div>
-          <label htmlFor='email'>CORREO ELECTRÓNICO</label><br />
-          <input name='email' type='email' id='email' placeholder='juanperon@gmail.com' />
-        </div>
-        <div>
-          <label htmlFor='password'>CONTRASEÑA</label><br />
-          <input name='password' type='password' id='password' placeholder='Juan-Peron_123' />
-        </div>
-        <button type='submit'>Iniciar sesión</button>
-      </form>
+      <h1 className='tituloInicio'>Iniciá sesión</h1>
+      <div>
+        <form onSubmit={handleSubmitLoginForm}>
+          <div>
+            <label htmlFor='email'>CORREO ELECTRÓNICO</label><br />
+            <input name='email' type='email' id='email' placeholder='juanperon@gmail.com' />
+          </div>
+          <div>
+            <label htmlFor='password'>CONTRASEÑA</label><br />
+            <input name='password' type='password' id='password' placeholder='Juan-Peron_123' />
+          </div>
+          <button type='submit'>Iniciar sesión</button>
+        </form>
+      </div>
       <span>¿Te olvidaste la contraseña? <Link to='/forgot-password'>Restablecer</Link></span><br />
       <span>Si no tenés una cuenta, <Link to='/register'>registrate</Link></span>
     </div>

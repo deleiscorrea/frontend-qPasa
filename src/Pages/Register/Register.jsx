@@ -29,38 +29,47 @@ const Register = () => {
   }
   return (
     <div>
-      <h1>Registrate</h1>
-      <form onSubmit={handleSubmitRegisterForm}>
-        <div>
-          <label htmlFor='name'>NOMBRE</label><br />
-          <input
-            name='name' 
-            type='text' 
-            id='name' 
-            placeholder='Juan Perón' 
-            onChange={handleChangeInputValue}/>
+      <div className='qPasaRegister'>
+        <h2 className='quePasa'>qPasa!</h2>
+      </div>
+      <div className='fondoRegister'>
+        <h1 className='tituloRegister'>Registrate</h1>
+        <div className='formularioRegister'>
+          <form className='formRegister' onSubmit={handleSubmitRegisterForm} >
+            <div>
+              <label htmlFor='name' className='nameRegister'>Nombre</label><br />
+              <input
+                name='name' 
+                type='text' 
+                id='name' 
+                placeholder='Juan Perón' 
+                onChange={handleChangeInputValue}/>
+            </div>
+            <div>
+              <label htmlFor='email' className='emailRegister'>Email</label><br />
+              <input 
+                name='email' 
+                type='email' 
+                id='email' 
+                placeholder='juanperon@gmail.com' 
+                onChange={handleChangeInputValue}/>
+            </div>
+            <div>
+              <label htmlFor='password' className='passwordRegister'>Contraseña</label><br />
+              <input 
+                name='password' 
+                type='password' 
+                id='password' 
+                placeholder='Juan-Peron_123'
+                onChange={handleChangeInputValue}/>
+            </div>
+            <button className='botonRegister' type='submit'>Registrarme</button>
+          </form>
         </div>
-        <div>
-          <label htmlFor='email'>CORREO ELECTRÓNICO</label><br />
-          <input 
-            name='email' 
-            type='email' 
-            id='email' 
-            placeholder='juanperon@gmail.com' 
-            onChange={handleChangeInputValue}/>
+        <div className='spanRegister'>
+          <span><b>Si ya tenés una cuenta,</b> <Link to='/login' className='iniciar'><b>iniciá sesión</b></Link></span>
         </div>
-        <div>
-          <label htmlFor='password'>CONTRASEÑA</label><br />
-          <input 
-            name='password' 
-            type='password' 
-            id='password' 
-            placeholder='Juan-Peron_123'
-            onChange={handleChangeInputValue}/>
-        </div>
-        <button type='submit'>Registrarme</button>
-      </form>
-      <span>Si ya tenés una cuenta, <Link to='/login'>iniciá sesión</Link></span>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,80 @@
+.qPasaLogin{
+    background-color: #F9E400;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.quePasa{
+    color: #F5004F;
+    position: fixed;
+    z-index: 2;
+}
+
+.fondoLogin{
+    background-color: #F9E400;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 50px;
+}
+
+.tituloLogin{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.formularioLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.labelEmail, .labelContraseña{
+    font-size: 20px;
+}
+
+#email, #password{
+    width: 200px;
+    height: 30px;
+}
+
+#email::placeholder, #password::placeholder{
+    padding-left: 5px;
+}
+
+.botonInicioLogin{
+    background-color: rgb(31, 31, 113);
+    color: white;
+    margin-top: 10px;
+    width: 60%;
+    padding: 10px 0px 10px 0px;
+}
+
+.spanLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    width: 60%;
+}
+
+.restablecer, .registrate{
+    color: #F5004F;
+    text-decoration: none;
+}

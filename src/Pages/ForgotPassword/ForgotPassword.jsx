@@ -23,17 +23,28 @@ const ForgotPassword = () => {
     }
     return (
         <div>
-            <h1>¿Olvidaste tu contraseña?</h1>
-            <p>Se te enviará un correo electrónico con un enlace para restablecer tu contraseña</p>
-            <form onSubmit={handleSubmitLoginForm}>
-                <div>
-                    <label htmlFor='email'>CORREO ELECTRÓNICO</label><br />
-                    <input name='email' type='email' id='email' placeholder='juanperon@gmail.com' />
+            <div className='qPasaForgot'>
+                <h2 className='quePasa'>qPasa!</h2>
+            </div>
+            <div className='fondoForgot'>
+                <h1 className='tituloForgot'>Restablecé tu <br />contraseña</h1>
+                <div className='formularioForgot'>
+                    <form className='formForgot' onSubmit={handleSubmitLoginForm}>
+                        <div>
+                            <label htmlFor='email' className='emailForgot'>Email</label><br />
+                            <input name='email' type='email' id='email' placeholder='juanperon@gmail.com' />
+                        </div>
+                        <div className='parrafoForgot'>
+                            <p>Se te enviará un correo electrónico con un enlace para restablecer tu contraseña</p> 
+                        </div>
+                        <button type='submit' className='botonForgot'>Enviar</button>
+                    </form>
                 </div>
-                <button type='submit'>Enviar</button>
-            </form>
-            <span>Si ya tenés una cuenta, <Link to='/login'>iniciá sesión</Link></span><br />
-            <span>Si no tenés una cuenta, <Link to='/register'>registrate</Link></span>
+                <div className='spanForgot'>
+                    <span>Si ya tenés una cuenta, <Link to='/login'>iniciá sesión</Link></span><br />
+                    <span>Si no tenés una cuenta, <Link to='/register'>registrate</Link></span>
+                </div>
+            </div>
         </div>
     )
 }

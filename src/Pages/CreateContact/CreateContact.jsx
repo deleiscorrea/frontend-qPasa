@@ -49,29 +49,36 @@ const CreateContact = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmitNewContact}>
-                <div>
-                    <label htmlFor="name">Nombre</label>
-                    <input name="name" type="text" id="name" />
+            <div className='qPasaCreate'>
+                <h2 className='quePasa'>qPasa!</h2>
+            </div>
+            <div className='fondoCreate'>
+                <h1 className='tituloCreate'>Crear contacto</h1>
+                <div className='formularioCreate'>
+                    <form className='formCreate' onSubmit={handleSubmitNewContact}>
+                        <div>
+                            <label htmlFor="name"></label>
+                            <input name="name" type="text" id="name" placeholder='Nombre'/>
+                        </div>
+                        <div>
+                            <label htmlFor="email"></label>
+                            <input name="email" type="email" id="email" placeholder='Email'/>
+                        </div>
+                        <div>
+                            <label htmlFor="info"></label>
+                            <input name="info" type="text" id="info" placeholder='Información'/>
+                        </div>
+                        <div>
+                            <label htmlFor="image"></label>
+                            <input name="image"type="file" id="image" onChange={handleChangeFile} accept='image/*'/>
+                        </div>
+                        <button type='submit' className='botonCreate'>Crear contacto</button>
+                    </form>
                 </div>
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input name="email" type="email" id="email" />
+                <div className='spanCreate'>
+                    <Link to={'/contacts'} className='contactos'>Contactos</Link>
                 </div>
-                <div>
-                    <label htmlFor="info">Información</label>
-                    <input name="info" type="text" id="info" />
-                </div>
-                <div>
-                    {
-                        image && <img src={image} alt="" />
-                    }
-                    <label htmlFor="igame">Foto</label>
-                    <input name="image"type="file" id="image" onChange={handleChangeFile} accept='image/*'/>
-                </div>
-                <button type='submit'>Crear contacto</button>
-            </form>
-            <Link to={'/contacts'}>Contactos</Link>
+            </div>
         </div>
     )
 }

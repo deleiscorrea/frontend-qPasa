@@ -20,7 +20,7 @@ export const GET = async (URL_API, params) => {
         return response.json()
     }
     catch(error){
-        console.error(error)
+        throw error
     }
 }
 

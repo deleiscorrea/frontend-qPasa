@@ -27,14 +27,14 @@ export const GET = async (URL_API, params) => {
 const getUnnauthenticatedHeaders = () => {
     const unnauthenticatedHeaders = new Headers()
     unnauthenticatedHeaders.set('Content-Type', 'application/json')
-    unnauthenticatedHeaders.set('x-api-key', '023be404-c59a-4f97-bce4-941acd7331c5')
+    unnauthenticatedHeaders.set('x-api-key', '423700dd-1327-48b3-95ce-e5a049b7dd87')
     return unnauthenticatedHeaders
 }
 
 const getAuthenticatedHeaders = () => {
     const authenticatedHeaders = new Headers()
     authenticatedHeaders.set('Content-Type', 'application/json')
-    authenticatedHeaders.set('x-api-key', '023be404-c59a-4f97-bce4-941acd7331c5')
+    authenticatedHeaders.set('x-api-key', '423700dd-1327-48b3-95ce-e5a049b7dd87')
     authenticatedHeaders.set('Authorization', `Bearer ${sessionStorage.getItem('access_token')}`)
     return authenticatedHeaders
 }

@@ -26,6 +26,19 @@ export const GET = async (URL_API, params) => {
     }
 }
 
+export const DELETE = async (URL_API, params) => {
+    try {
+        const response = await fetch(URL_API, {
+            method: 'DELETE',
+            mode: 'cors',
+            ...params
+        })
+        return response.json()
+    } catch (error) {
+        throw error
+    }
+}
+
 const getUnnauthenticatedHeaders = () => {
     const unnauthenticatedHeaders = new Headers()
     unnauthenticatedHeaders.set('Content-Type', 'application/json')

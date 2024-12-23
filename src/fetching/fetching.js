@@ -2,6 +2,7 @@ export const POST = async (URL_API, params) => {
     try{
         const response = await fetch(URL_API, {
             method: 'POST',
+            mode: 'cors',
             ...params
         })
         return response.json()

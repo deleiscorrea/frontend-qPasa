@@ -16,6 +16,7 @@ export const GET = async (URL_API, params) => {
     try{
         const response = await fetch(URL_API, {
             method: 'GET',
+            mode: 'cors',
             ...params
         })
         return response.json()

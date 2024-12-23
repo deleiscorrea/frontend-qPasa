@@ -7,15 +7,24 @@ const useContacts = () => {
     const [isLoadingContacts, setIsLoadingContacts] = useState(true)
 
     const getContacts = async () => {
-        const response = await GET(
-            `${ENVIROMENT.URL_BACKEND}/api/contacts`, {
-            headers: getAuthenticatedHeaders(),
+        setIsLoadingContacts(true); // Mostrar indicador de carga durante la actualización
+        try {
+            const response = await GET(
+                `${ENVIROMENT.URL_BACKEND}/api/contacts`, 
+                {
+                    headers: getAuthenticatedHeaders(),
+                }
+            )
+            console.log({ response });
+            if (response.ok) {
+                setContacts(response.payload.contacts || []);
+            } else {
+                console.error("Error al obtener contactos:", response.payload.detail);
             }
-        )
-        console.log({ response })
-        if(response.ok){
-            setContacts(response.payload.contacts)
-            setIsLoadingContacts(false)
+        } catch (error) {
+            console.error("Error al realizar la solicitud:", error.message);
+        } finally {
+            setIsLoadingContacts(false); // Detener indicador de carga
         }
     }
 

@@ -8,17 +8,22 @@ const Contacts = () => {
     const { contacts, isLoadingContacts, getContacts } = useContacts()
 
     const handleDeleteContact = async (contactId) => {
-        const response = await DELETE(
-            `${ENVIROMENT.URL_BACKEND}/api/contacts/${contactId}`,
-            {
-                headers: getAuthenticatedHeaders(),
+        try {
+            const response = await DELETE(
+                `${ENVIROMENT.URL_BACKEND}/api/contacts/${contactId}`,
+                {
+                    headers: getAuthenticatedHeaders(),
+                }
+            )
+    
+            if (response && response.ok) {
+                console.log("Contacto eliminado exitosamente");
+                await getContacts(); // Recargar contactos después de eliminar
+            } else {
+                console.error("Error al eliminar el contacto:", response?.payload?.detail || "Error desconocido");
             }
-        )
-        if (response.ok) {
-            // Si el contacto se elimina con éxito, actualiza la lista
-            getContacts()
-        } else {
-            console.error("Error al eliminar el contacto:", response.payload.detail)
+        } catch (error) {
+            console.error("Error al realizar la solicitud:", error.message);
         }
     }
 

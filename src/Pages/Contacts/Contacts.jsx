@@ -29,12 +29,12 @@ const Contacts = () => {
 
     return (
         <div>
-            <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", justifyContent: "center", height: "50px", paddingLeft: "10px" }}>
+            <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", height: "50px", paddingLeft: "10px" }}>
                 <h2 style={{color: "#F5004F", position: "fixed", zIndex: "2"}}>qPasa!</h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
                 <h1 style={{color: "white", fontSize: "40px", marginBottom: "20px"}}>Contactos</h1>
-                <Link to='/contacts/new'><button style={{backgroundColor: "#F9E400", width: "40%", padding: "10px 0px 10px 0px"}}>Nuevo contacto</button></Link>
+                <Link to='/contacts/new'><button style={{backgroundColor: "#F9E400", width: "60%", padding: "10px 0px 10px 0px"}}>Nuevo contacto</button></Link>
                 {
                     isLoadingContacts
                         ? <span>Cargando...</span>

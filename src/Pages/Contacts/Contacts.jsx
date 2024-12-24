@@ -29,7 +29,7 @@ const Contacts = () => {
 
     return (
         <div>
-            <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", height: "50px", paddingLeft: "10px" }}>
+            <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", height: "50px", paddingLeft: "10px", position: "fixed", zIndex: "2"}}>
                 <h2 style={{color: "#F5004F", position: "fixed", zIndex: "2"}}>qPasa!</h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>

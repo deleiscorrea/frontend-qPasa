@@ -1,0 +1,20 @@
+.qPasaContactos{
+    background-color: #F9E400;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.quePasaContactos{
+    color: #F9E400;
+    position: fixed;
+    z-index: 2;
+}
+
+.nuevosContactos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

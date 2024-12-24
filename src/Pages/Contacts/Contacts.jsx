@@ -60,7 +60,7 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
 const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
     return (
         <div>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <h1 style={{ display: "inline", color: "white", marginRight: "10px"}}>{name}</h1>
                 <span style={{ color: "gainsboro"}}>{` (${_id})`}</span>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>

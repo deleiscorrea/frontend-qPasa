@@ -1,0 +1,65 @@
+.qPasaContacts {
+    background-color: #F9E400;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.quePasaContacts {
+    color: #F9E400;
+    position: fixed;
+    z-index: 2;
+}
+
+.listaContactos {
+    background-color: rgb(31, 31, 113);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 50px;
+}
+
+.nameContacto {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.idContacto {
+    font-size: 14px;
+    color: #F9E400;
+}
+
+.imgContacto {
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 2px solid #F9E400;
+}
+
+.btnEliminar {
+    background-color: #F5004F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btnEliminar:hover {
+    background-color: #D40043;
+}
+
+.listaContactos a {
+    color: #F5004F;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.listaContactos a:hover {
+    text-decoration: underline;
+}

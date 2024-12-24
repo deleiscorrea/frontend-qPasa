@@ -55,14 +55,14 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
 const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
     return (
         <div>
-            <div className='qPasaCreate'>
-                <h2 className='quePasa'>qPasa!</h2>
+            <div className='qPasaContacts'>
+                <h2 className='quePasaContacts'>qPasa!</h2>
             </div>
-            <div>
-                <h1 style={{ display: "inline" }}>{name}</h1>
-                <span>{` (${_id})`}</span>
+            <div className='listaContactos'>
+                <h1 className='nameContacto' style={{ display: "inline" }}>{name}</h1>
+                <span className='idContacto'>{` (${_id})`}</span>
                 <br />
-                <img
+                <img className='imgContacto'
                     src={image}
                     alt={name}
                     width={'100'}
@@ -70,7 +70,7 @@ const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
                 />
                 <Link to={'/contacts/' + _id}>Ir a detalle</Link>
                 <br />
-                <button onClick={() => onDeleteContact(_id)}>Eliminar</button>
+                <button className='btnEliminar' onClick={() => onDeleteContact(_id)}>Eliminar</button>
                 <br />
             </div>
         </div>

@@ -55,11 +55,11 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
 const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
     return (
         <div>
-            <div className='listaContactos'>
-                <h1 className='nameContacto' style={{ display: "inline" }}>{name}</h1>
-                <span className='idContacto'>{` (${_id})`}</span>
+            <div className=''>
+                <h1 className='' style={{ display: "inline" }}>{name}</h1>
+                <span className=''>{` (${_id})`}</span>
                 <br />
-                <img className='imgContacto'
+                <img className=''
                     src={image}
                     alt={name}
                     width={'100'}
@@ -67,7 +67,7 @@ const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
                 />
                 <Link to={'/contacts/' + _id}>Ir a detalle</Link>
                 <br />
-                <button className='btnEliminar' onClick={() => onDeleteContact(_id)}>Eliminar</button>
+                <button className='' onClick={() => onDeleteContact(_id)}>Eliminar</button>
                 <br />
             </div>
         </div>

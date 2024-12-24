@@ -29,10 +29,10 @@ const Contacts = () => {
 
     return (
         <div>
-            <div className='qPasaContactos'>
-                <h2 className='quePasaContactos'>qPasa!</h2>
+            <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", height: "50px", paddingLeft: "10px" }}>
+                <h2 style={{color: "#F9E400", position: "fixed", zIndex: "2"}}>qPasa!</h2>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
                 <h1 className='contactostitulo'>Contactos</h1>
                 <Link to='/contacts/new'><button className='botonNuevoContacto'>Nuevo contacto</button></Link>
                 {

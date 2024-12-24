@@ -34,7 +34,7 @@ const Contacts = () => {
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
                 <h1 style={{color: "white", fontSize: "40px", marginBottom: "20px", marginTop: "20px"}}>Contactos</h1>
-                <Link to='/contacts/new'><button style={{backgroundColor: "#F9E400", width: "60%", padding: "10px 0px 10px 0px", display: "flex", alignItems: "center", justifyContent: "center"}}>Nuevo contacto</button></Link>
+                <Link to='/contacts/new'><button style={{backgroundColor: "#F9E400", width: "100%", padding: "10px 0px 10px 0px", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none"}}>Nuevo contacto</button></Link>
                 {
                     isLoadingContacts
                         ? <span>Cargando...</span>
@@ -61,19 +61,20 @@ const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
     return (
         <div>
             <div style={{ display: "flex", alignItems: "center" }}>
-                <h1 style={{ display: "inline", color: "white" }}>{name}</h1>
-                <span className=''>{` (${_id})`}</span>
-                <br />
-                <img className=''
-                    src={image}
-                    alt={name}
-                    width={'100'}
-                    height={'100'}
-                />
-                <Link to={'/contacts/' + _id}>Ir a detalle</Link>
-                <br />
-                <button className='' onClick={() => onDeleteContact(_id)}>Eliminar</button>
-                <br />
+                <h1 style={{ display: "inline", color: "white", marginRight: "10px"}}>{name}</h1>
+                <span style={{ color: "gainsboro"}}>{` (${_id})`}</span>
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <img className=''
+                        src={image}
+                        alt={name}
+                        width={'100'}
+                        height={'100'}
+                    />
+                    <Link style={{ textDecoration: "none", color: "#F5004F"}}to={'/contacts/' + _id}>Ir a detalle</Link>
+                    <br />
+                    <button style={{ backgroundColor: "red", marginTop: "10px", width: "60%", padding: "10px 0px 10px 0px"}}onClick={() => onDeleteContact(_id)}>Eliminar</button>
+                    <br />
+                </div>
             </div>
         </div>
     )

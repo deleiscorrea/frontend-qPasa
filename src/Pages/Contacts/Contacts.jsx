@@ -62,18 +62,20 @@ const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
         <div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <h1 style={{ display: "inline", color: "white", marginRight: "10px", marginBottom: "10px"}}>{name}</h1>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <img className=''
-                        src={image}
-                        alt={name}
-                        width={'100'}
-                        height={'100'}
-                    />
-                    <span style={{ color: "gainsboro", marginBottom: "10px"}}>{` (${_id})`}</span>
-                    <Link style={{ textDecoration: "none", color: "#F5004F"}}to={'/contacts/' + _id}>Ir a detalle</Link>
-                    <br />
-                    <button style={{ backgroundColor: "red", width: "60%", padding: "10px 0px 10px 0px"}}onClick={() => onDeleteContact(_id)}>Eliminar</button>
-                    <br />
+                <div style={{ display: "flex"}}>
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <img className=''
+                            src={image}
+                            alt={name}
+                            width={'100'}
+                            height={'100'}
+                        />
+                        <span style={{ color: "gainsboro", marginBottom: "10px"}}>{` (${_id})`}</span>
+                        <Link style={{ textDecoration: "none", color: "#F5004F"}}to={'/contacts/' + _id}>Ir a detalle</Link>
+                        <br />
+                        <button style={{ backgroundColor: "red", width: "40%", padding: "10px 0px 10px 0px"}}onClick={() => onDeleteContact(_id)}>Eliminar</button>
+                        <br />
+                    </div>
                 </div>
             </div>
         </div>

@@ -55,9 +55,6 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
 const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
     return (
         <div>
-            <div className='qPasaContacts'>
-                <h2 className='quePasaContacts'>qPasa!</h2>
-            </div>
             <div className='listaContactos'>
                 <h1 className='nameContacto' style={{ display: "inline" }}>{name}</h1>
                 <span className='idContacto'>{` (${_id})`}</span>

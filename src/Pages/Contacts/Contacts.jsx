@@ -64,8 +64,6 @@ const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
                 width={'100'}
                 height={'100'}
             />
-            <h3>{email}</h3>
-            <h4>{info}</h4>
             <Link to={'/contacts/' + _id}>Ir a detalle</Link>
             <br />
             <button onClick={() => onDeleteContact(_id)}>Eliminar</button>

@@ -32,7 +32,7 @@ const Contacts = () => {
             <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", height: "50px", paddingLeft: "10px", position: "fixed", zIndex: "2", width: "100%"}}>
                 <h2 style={{color: "#F5004F", position: "fixed", zIndex: "2"}}>qPasa!</h2>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh", marginTop: "50px" }}>
                 <h1 style={{color: "white", fontSize: "40px", marginBottom: "20px", marginTop: "20px"}}>Contactos</h1>
                 <Link style={{textDecoration: "none"}} to='/contacts/new'><button style={{backgroundColor: "#F9E400", width: "100%", padding: "10px 0px 10px 0px", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", marginBottom: "30px"}}>Nuevo contacto</button></Link>
                 {

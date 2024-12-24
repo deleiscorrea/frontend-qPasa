@@ -32,7 +32,7 @@ const Contacts = () => {
             <div className='qPasaContactos'>
                 <h2 className='quePasaContactos'>qPasa!</h2>
             </div>
-            <div className='nuevosContactos'>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <h1 className='contactostitulo'>Contactos</h1>
                 <Link to='/contacts/new'><button className='botonNuevoContacto'>Nuevo contacto</button></Link>
                 {

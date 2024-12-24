@@ -33,7 +33,7 @@ const Contacts = () => {
                 <h2 style={{color: "#F5004F", position: "fixed", zIndex: "2"}}>qPasa!</h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
-                <h1 style={{color: "white", fontSize: "40px", marginBottom: "20px"}}>Contactos</h1>
+                <h1 style={{color: "white", fontSize: "40px", marginBottom: "20px", marginTop: "20px"}}>Contactos</h1>
                 <Link to='/contacts/new'><button style={{backgroundColor: "#F9E400", width: "60%", padding: "10px 0px 10px 0px"}}>Nuevo contacto</button></Link>
                 {
                     isLoadingContacts
@@ -60,8 +60,8 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
 const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
     return (
         <div>
-            <div className=''>
-                <h1 className='' style={{ display: "inline" }}>{name}</h1>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <h1 style={{ display: "inline", color: "white" }}>{name}</h1>
                 <span className=''>{` (${_id})`}</span>
                 <br />
                 <img className=''

@@ -61,7 +61,8 @@ const Contact = ({ name, email, info, image, _id, onDeleteContact }) => {
             <img
                 src={image}
                 alt={name}
-                width={'200'}
+                width={'100'}
+                height={'100'}
             />
             <h3>{email}</h3>
             <h4>{info}</h4>

@@ -114,7 +114,7 @@ const Home = () => {
                 )}
             <Link to={'/contacts'}>
                 <button className='btnIA'>
-                    <img src="imagenes/ia.png" alt="ia" className='imgIA'/>
+                    <img src="imagenes/contacts.png" alt="ia" className='imgIA'/>
                 </button>
             </Link>
         </>

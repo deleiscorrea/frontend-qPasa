@@ -26,7 +26,7 @@ const DetailContact = () => {
 const ContactDetail = ({name, email, info, image, _id}) => {
   return (
     <div style={{display: "flex", alignItems: "center", gap: "10px", flexDirection: "column", color: "white"}}>
-      <h1 style={{fontSize: "50px", textAlign: "center"}}>{name}</h1>
+      <h1 style={{fontSize: "50px", textAlign: "center", marginTop: "50px"}}>{name}</h1>
       <span style={{fontSize: "15px", textAlign: "center"}}>{info}</span>
       <br />
       <img

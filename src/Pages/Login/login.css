@@ -78,3 +78,92 @@
     color: #F5004F;
     text-decoration: none;
 }
+
+@media screen and (min-width: 500px) {
+    .tituloLogin {
+        font-size: 30px;
+    }
+
+    #email,
+    #password {
+        width: 250px;
+        height: 35px;
+    }
+
+    .botonInicioLogin {
+        width: 70%;
+        padding: 15px 0;
+    }
+
+    .spanLogin {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .qPasaLogin {
+        height: 70px;
+    }
+
+    .quePasa {
+        font-size: 24px;
+    }
+
+    .tituloLogin {
+        font-size: 36px;
+    }
+
+    .formularioLogin {
+        margin-bottom: 30px;
+    }
+
+    #email,
+    #password {
+        width: 300px;
+        height: 40px;
+    }
+
+    .botonInicioLogin {
+        width: 50%;
+        padding: 15px 0;
+    }
+
+    .spanLogin {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .qPasaLogin {
+        height: 100px;
+        padding-left: 20px;
+    }
+
+    .quePasa {
+        font-size: 36px;
+    }
+
+    .tituloLogin {
+        font-size: 48px;
+    }
+
+    #email,
+    #password {
+        width: 400px;
+        height: 50px;
+    }
+
+    .botonInicioLogin {
+        width: 40%;
+        padding: 20px 0;
+        font-size: 18px;
+    }
+
+    .spanLogin {
+        width: 60%;
+    }
+
+    .formLogin {
+        gap: 20px;
+    }
+}

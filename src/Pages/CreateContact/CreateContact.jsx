@@ -50,7 +50,7 @@ const CreateContact = () => {
     return (
         <div>
             <div className='qPasaCreate'>
-                <h2 className='quePasa'>qPasa!</h2>
+                <Link to={'/home'}><h2 className='quePasa'>qPasa!</h2></Link>
             </div>
             <div className='fondoCreate'>
                 <h1 className='tituloCreate'>Crear contacto</h1>

@@ -23,18 +23,17 @@ const DetailContact = () => {
 
 const ContactDetail = ({name, email, info, image, _id}) => {
   return (
-    <div>
-      <h1 style={{display: "inline"}}>{name}</h1>
-            <span>{` (${_id})`}</span>
-            <br />
-            <img
-                src={image}
-                alt={name}
-                width={'300'}
-                height={'300'}
-            />
-            <h2>{email}</h2>
-            <span>{info}</span>
+    <div className='detalle'>
+      <h1 className='nombreDetalle' style={{display: "inline"}}>{name}</h1>
+      <span className='infoDetalle'>{info}</span>
+      <br />
+      <img
+          src={image}
+          alt={name}
+          width={'300'}
+          height={'300'}
+      />
+      <h2 className='emailDetalle'>{email}</h2>
     </div>
   )
 }

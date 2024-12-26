@@ -30,7 +30,7 @@ const Contacts = () => {
     return (
         <div>
             <div style={{ backgroundColor: "#F9E400", display: "flex", alignItems: "center", height: "50px", paddingLeft: "10px", position: "fixed", zIndex: "2", width: "100%"}}>
-                <h2 style={{color: "#F5004F", position: "fixed", zIndex: "2"}}>qPasa!</h2>
+                <Link to={'/home'}><h2 style={{color: "#F5004F", position: "fixed", zIndex: "2"}}>qPasa!</h2></Link>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
                 <h1 style={{color: "white", fontSize: "40px", marginBottom: "20px", marginTop: "50px"}}>Contactos</h1>

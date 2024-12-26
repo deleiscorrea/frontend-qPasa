@@ -147,12 +147,12 @@
     padding-right: 2.5px;
     border-radius: 100%;
     background-color: #F9E400;
-    border: 2px dashed black;
+    border: 2px solid black;
 }
 
 .imgIA{
     width: 40px;
-    height: 40px;
+    height: 30px;
 }
 
 @media screen and (min-width: 500px){ 
@@ -230,7 +230,7 @@
     
     .imgIA{
         width: 55px;
-        height: 55px;
+        height: 45px;
     }
 }
 
@@ -327,7 +327,7 @@
     
     .imgIA{
         width: 60px;
-        height: 60px;
+        height: 50px;
     }
 }
 
@@ -508,6 +508,6 @@
     
     .imgIA{
         width: 46px;
-        height: 46px;
+        height: 36px;
     }
 }

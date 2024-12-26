@@ -78,3 +78,89 @@
     color: #F5004F;
     text-decoration: none;
 }
+
+@media screen and (min-width: 500px) {
+    .tituloRegister {
+        font-size: 30px;
+    }
+
+    #name, #email, #password {
+        width: 250px;
+        height: 35px;
+    }
+
+    .botonRegister {
+        width: 70%;
+        padding: 15px 0;
+    }
+
+    .spanRegister {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .qPasaRegister {
+        height: 70px;
+    }
+
+    .quePasa {
+        font-size: 24px;
+    }
+
+    .tituloRegister {
+        font-size: 36px;
+    }
+
+    .formularioRegister {
+        margin-bottom: 30px;
+    }
+
+    #name, #email, #password {
+        width: 300px;
+        height: 40px;
+    }
+
+    .botonRegister {
+        width: 50%;
+        padding: 15px 0;
+    }
+
+    .spanRegister {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .qPasaRegister {
+        height: 100px;
+        padding-left: 20px;
+    }
+
+    .quePasa {
+        font-size: 36px;
+    }
+
+    .tituloRegister {
+        font-size: 48px;
+    }
+
+    #name, #email, #password {
+        width: 400px;
+        height: 50px;
+    }
+
+    .botonRegister {
+        width: 40%;
+        padding: 20px 0;
+        font-size: 18px;
+    }
+
+    .spanRegister {
+        width: 60%;
+    }
+
+    .formRegister {
+        gap: 20px;
+    }
+}
